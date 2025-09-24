@@ -17,7 +17,6 @@ const Sidebar = () => {
                         link.route === '/'
                             ? pathname === '/'
                             : pathname.startsWith(link.route);
-                    console.log('log1', pathname.startsWith(link.route))
                     return (
                         <Link
                             key={link.label}
