@@ -106,13 +106,71 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.208 0.042 265.755);
   --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.496 0.238 263.948);
   --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
   --sidebar-accent: oklch(0.279 0.041 260.031);
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
+
+/* ==== clerk class override ===== */
+
+.cl-badge {
+    background-color: #1447E6FF;
+    color: #fff;
+}
+
+.cl-formFieldInput{
+    background: #1D293DFF;
+    color: white;
+}
+
+.cl-socialButtonsBlockButton {
+    background: #1D293DFF;
+}
+
+.cl-socialButtonsBlockButton:hover {
+    background: #212F45FF;
+}
+
+.cl-socialButtonsBlockButtonText {
+    color: #fff;
+}
+
+.cl-providerIcon__github {
+    filter: invert(1);
+}
+
+.cl-userButtonPopoverActionButtonIcon {
+    color: white;
+}
+
+.cl-logoBox {
+    height: 40px;
+}
+.cl-dividerLine {
+    background: #252a41;
+    height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+    border: 3px solid #565761;
+    background: #1D293DFF;
+}
+
+.cl-socialButtonsIconButton:hover {
+    background: #212F45FF;
+}
+
+.cl-internal-wkkub3 {
+    color: white;
+}
+.cl-userButtonPopoverActionButton {
+    color: white;
+}
+
+/* =============================== */
 
 @layer base {
   * {
