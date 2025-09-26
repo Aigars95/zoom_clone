@@ -20,6 +20,17 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+    {
+        rules: {
+            "object-curly-newline": ["error", {
+                ObjectExpression: { multiline: true, minProperties: 1, consistent: true },
+                ObjectPattern: { multiline: true, minProperties: 1, consistent: true },
+                ImportDeclaration: { multiline: true, minProperties: 1, consistent: true },
+                ExportDeclaration: { multiline: true, minProperties: 1, consistent: true }
+            }],
+            "array-bracket-newline": ["error", { multiline: true, minItems: 2 }]
+        }
+    }
 ];
 
 export default eslintConfig;

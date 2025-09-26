@@ -1,0 +1,84 @@
+import React from 'react';
+import {
+    Dialog,
+    DialogContent,
+} from "@/components/ui/dialog"
+import Image from "next/image";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+
+interface MeetingModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    title: string;
+    className?: string;
+    children?: React.ReactNode;
+    handleClick?: () => void;
+    buttonText: string;
+    img?: string;
+    buttonIcon?: string;
+
+}
+
+const MeetingModal = ({
+    isOpen,
+    onClose,
+    title,
+    className,
+    buttonText,
+    children,
+    img,
+    buttonIcon,
+    handleClick,
+                      }: MeetingModalProps) => {
+    return (
+        <Dialog
+            open={isOpen}
+            onOpenChange={onClose}
+        >
+            <DialogContent className="flex w-full max-w-[520px] flex-col
+            gap-6 border-none px-6 py-9">
+               <div className="flex flex-col gap-6">
+                   {img && (
+                       <div>
+                           <Image
+                               src={img}
+                               alt={'image'}
+                               width={72}
+                               height={72}
+                           />
+                       </div>
+                   )}
+                   <h1 className={cn('text-3xl font-bold leading-[42px]', className)}>
+                       {title}
+                   </h1>
+                   {children}
+                   <Button
+                       className='
+                       bg-sidebar-primary
+                       focus-visible:ring-0
+                       focus-visible:ring-offset-0
+                       hover:bg-sidebar-primary
+                       text-sidebar-primary-foreground
+                       cursor-pointer
+                       opacity-100
+                       hover:opacity-95'
+                       onClick={handleClick}
+                   >
+                       {buttonIcon && (
+                           <Image
+                           src={buttonIcon}
+                           alt={'button icon'}
+                           width={13}
+                           height={13}
+                           />
+                       )}
+                       {buttonText || 'Schedule Meeting'}
+                   </Button>
+               </div>
+            </DialogContent>
+        </Dialog>
+    );
+};
+
+export default MeetingModal;
