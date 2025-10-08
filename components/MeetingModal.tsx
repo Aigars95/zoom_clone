@@ -58,7 +58,7 @@ const MeetingModal = ({
                        bg-sidebar-primary
                        focus-visible:ring-0
                        focus-visible:ring-offset-0
-                       hover:bg-sidebar-primary
+                       hover:bg-sidebar-primary/90
                        text-sidebar-primary-foreground
                        cursor-pointer
                        opacity-100

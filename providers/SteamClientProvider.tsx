@@ -23,7 +23,7 @@ const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
             apiKey,
             user:{
                 id: user?.id,
-                name: user?.username || user?.id,
+                name: user?.fullName || user?.username || user?.id,
                 image: user?.imageUrl,
             },
             tokenProvider
